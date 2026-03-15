@@ -1,1 +1,34 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEVOLP ART - TRGOVINA</title>
+    <style>
+        body { background-color: #000; color: #39ff14; font-family: 'Courier New', monospace; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .terminal { border: 2px solid #39ff14; padding: 30px; width: 85%; max-width: 400px; box-shadow: 0 0 20px #39ff14; border-radius: 15px; text-align: center; }
+        h1 { font-size: 1.8rem; margin-bottom: 10px; }
+        input { width: 100%; padding: 12px; margin: 20px 0; background: #111; border: 1px solid #39ff14; color: #fff; box-sizing: border-box; }
+        button { width: 100%; padding: 15px; background: #39ff14; color: #000; border: none; font-weight: bold; cursor: pointer; text-transform: uppercase; }
+        .status { margin-top: 15px; font-size: 0.7rem; opacity: 0.6; }
+    </style>
+</head>
+<body>
+    <div class="terminal">
+        <h1>DEVOLP ART</h1>
+        <p>PULA OPERATIONS CENTER</p>
+        <hr style="border: 0.5px solid #333;">
+        <input type="text" id="upit" placeholder="UPIŠI NARUDŽBU / UPIT">
+        <button onclick="posalji()">POKRENI TRANSFER</button>
+        <div class="status">SISTEM AKTIVAN // BEZ POSREDNIKA</div>
+    </div>
+    <script>
+        function posalji() {
+            var poruka = document.getElementById('upit').value;
+            if (poruka.trim() === "") { alert("SISTEM: Unesite podatke!"); } 
+            else { alert("Upit poslan: " + poruka); }
+        }
+    </script>
+</body>
+</html>
 Moja trgovina je online
